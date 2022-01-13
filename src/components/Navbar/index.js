@@ -26,32 +26,33 @@ useEffect(()=> {
 const toggleHome= ()=>{
     scroll.scrollToTop();
 };
+const rangu=scrollNav? "#000":"#fff";
 
     return (
         <>
-        <IconContext.Provider value={{color: '#fff'}}>
+        <IconContext.Provider value={{color: rangu}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to="/" onClick={toggleHome}>dollo</NavLogo>
-                <MobileIcon onClick={toggle}>
+                <NavLogo scrollNav={scrollNav} to="/" onClick={toggleHome}>inviteinfo</NavLogo>
+                <MobileIcon  onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                       <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80} >About</NavLinks> 
+                       <NavLinks scrollNav={scrollNav} to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80} >About</NavLinks> 
                     </NavItem>
                     <NavItem>
-                       <NavLinks to='discover' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Discover</NavLinks> 
+                       <NavLinks scrollNav={scrollNav} to='discover' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Discover</NavLinks> 
                     </NavItem>
                     <NavItem>
-                       <NavLinks to='services' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Services</NavLinks> 
+                       <NavLinks scrollNav={scrollNav} to='services' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Services</NavLinks> 
                     </NavItem>
                     <NavItem>
-                       <NavLinks to='signup' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Sign Up</NavLinks> 
+                       <NavLinks scrollNav={scrollNav} to='signup' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Sign Up</NavLinks> 
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                    <NavBtnLink href="https://api.whatsapp.com/send?phone=+918885190228">Conatct us</NavBtnLink>
                 </NavBtn>
             </NavbarContainer>
         </Nav>
